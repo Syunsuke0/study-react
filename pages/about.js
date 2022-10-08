@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { Footer } from '../components/Footer'
-import Links from '../components/Links'
-import Headline from '../components/Headline'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import { Footer } from '../components/Footer';
+import { Links } from '../components/Links';
+import { Headline } from '../components/Headline';
 
 export default function Home() {
   return (
@@ -15,11 +15,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Headline page="about"/>
+        <Headline
+          page="about"
+          number={1111}
+          array={[1, 2, 3]}
+          obj={{ foo: 'foo', bar: 'bar' }}
+        />
         <Links />
       </main>
 
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
