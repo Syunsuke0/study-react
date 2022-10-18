@@ -22,7 +22,9 @@ export default function about() {
       <button onClick={handleClick}>ボタン</button>
       <button onClick={handleDisplay}>{isShow ? '非表示' : '表示'}</button>
       {isShow ? <h2>{count}</h2> : null}
+
       <hr />
+
       <input type="text" value={text} onChange={handleChange} />
       <button onClick={handleAdd}>追加</button>
       <ol>
@@ -30,6 +32,7 @@ export default function about() {
           return <li key={item}>{item}</li>;
         })}
       </ol>
+
       <Main page="about" />
       <Footer />
     </div>
