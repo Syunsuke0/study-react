@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const BgLightBlue = () => {
+export const useBgLightBlue = () => {
   useEffect(() => {
     document.body.style.backgroundColor = 'lightblue';
     return () => {
