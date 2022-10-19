@@ -25,8 +25,6 @@ export default function About({
       <button onClick={handleDisplay}>{isShow ? '非表示' : '表示'}</button>
       {isShow ? <h2>{count}</h2> : null}
 
-      <hr />
-
       <input type="text" value={text} onChange={handleChange} />
       <button onClick={handleAdd}>追加</button>
       <ol>
