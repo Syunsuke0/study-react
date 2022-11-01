@@ -4,7 +4,7 @@ export const User = () => {
   const { data, error, isLoading } = useUser();
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p>Loading....</p>;
   }
 
   if (error) {
