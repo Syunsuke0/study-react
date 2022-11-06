@@ -1,8 +1,7 @@
-import { fetcher } from 'src/utils/fetcher';
-import useSWR from 'swr';
+import useSWR from "swr";
 
 const useFetchArray = (url) => {
-  const { data, error, isLoading, isEmpty } = useSWR(url, fetcher);
+  const { data, error } = useSWR(url);
 
   return {
     data,
@@ -12,7 +11,7 @@ const useFetchArray = (url) => {
   };
 };
 
-const API_URL = 'https://jsonplaceholder.typicode.com';
+const API_URL = "https://jsonplaceholder.typicode.com";
 
 // posts
 export const usePosts = () => {
