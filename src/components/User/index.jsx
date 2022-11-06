@@ -1,7 +1,7 @@
 import { PostsByUserId } from "src/components/Posts/PostsByUserId";
 import { useUser } from "src/hooks/useUser";
 
-export const User = () => {
+export const UserComponent = () => {
   const { data, error, isLoading } = useUser();
 
   if (isLoading) {
