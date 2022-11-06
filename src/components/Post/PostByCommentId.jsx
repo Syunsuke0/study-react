@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { usePost } from 'src/hooks/usePost';
+import Link from "next/link";
+import { usePost } from "src/hooks/usePost";
 
 export const PostByCommentId = (props) => {
   const { data, error, isLoading, isEmpty } = usePost(props.id);
@@ -18,7 +18,7 @@ export const PostByCommentId = (props) => {
 
   return (
     <Link href={`/posts/${data?.id}`}>
-      <a>
+      <a className="text-lg hover:text-blue-500">
         <p>{data?.title}</p>
       </a>
     </Link>

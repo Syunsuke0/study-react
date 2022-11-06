@@ -1,5 +1,5 @@
-import { fetcher } from 'src/utils/fetcher';
-import useSWR from 'swr';
+import { fetcher } from "src/utils/fetcher";
+import useSWR from "swr";
 
 export const UserByUserId = (props) => {
   const { data, error } = useSWR(
@@ -15,5 +15,5 @@ export const UserByUserId = (props) => {
     return <div>{error.message}</div>;
   }
 
-  return <div>Created by {data.name}</div>;
+  return <div className="text-lg">Created by {data.name}</div>;
 };
