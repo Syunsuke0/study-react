@@ -1,8 +1,11 @@
 import Link from "next/link";
-import { usePost } from "src/hooks/usePost";
+import { useFetch } from "src/hooks/useFetch";
+import { API_URL } from "src/utils/const";
 
-export const PostByCommentId = (props) => {
-  const { data, error, isLoading, isEmpty } = usePost(props.id);
+export const PostTitleByCommentId = (props) => {
+  const { data, error, isLoading } = useFetch(
+    props.id ? `${API_URL}/posts/${props.id}` : null
+  );
 
   if (isLoading) {
     return <div>ローディング中です</div>;
@@ -10,10 +13,6 @@ export const PostByCommentId = (props) => {
 
   if (error) {
     return <div>{error.message}</div>;
-  }
-
-  if (isEmpty) {
-    return <div>データは空です</div>;
   }
 
   return (
